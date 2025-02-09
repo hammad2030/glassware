@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Hero Box Styles */
+.hero-box {
+    display: flex;
+    background-color: #dcdcdc; /* Grey background */
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    border-radius: 10px;
+    height: 450px; /* Increased height */
+}
+
+.hero-left {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;
+}
+
+.hero-image {
+    width: 250px; /* Adjusted size for image */
+    height: 350px; /* Adjusted size for image */
+    object-fit: cover; /* Ensures the image doesn't stretch but maintains aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    background-color: transparent; /* Ensures no background color */
+}
+
+.hero-right {
+    flex: 1;
+}
+
+.hero-right h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-right p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+/* About & Contact Sections */
+#about, #contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#about h2, #contact h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about p, #contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Increase padding for better spacing */
+    margin-top: 0; /* No margin to attach the footer right below map */
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Map height set to 40% of the viewport */
+    margin: 0;
+}
+
+/* Ensuring proper spacing between map and footer */
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navbar styles for smaller screens */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    /* Hero Box Styles for smaller screens */
+    .hero-box {
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .hero-left, .hero-right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        background-color: transparent;
+    }
+
+    .hero-right h1 {
+        font-size: 28px;
+    }
+
+    .hero-right p {
+        font-size: 16px;
+    }
+
+    /* Gallery Styles for smaller screens */
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 150px;
+    }
+
+    /* About & Contact Section Styles for smaller screens */
+    #about h2, #contact h2 {
+        font-size: 24px;
+    }
+
+    #about p, #contact p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Navbar styles for mobile screens */
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links li {
+        margin-right: 15px;
+    }
+
+    /* Hero Box Styles for mobile screens */
+    .hero-box {
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .hero-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-right h1 {
+        font-size: 22px;
+    }
+
+    .hero-right p {
+        font-size: 14px;
+    }
+
+    /* Gallery Styles for mobile screens */
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 120px;
+    }
+
+    /* Footer Styles for smaller screens */
+    footer {
+        font-size: 14px; /* Smaller footer text on mobile */
+    }
+}
